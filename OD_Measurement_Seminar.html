@@ -1049,6 +1049,100 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
 }
 .edit-toggle.active { background: var(--gold); color: var(--void); }
 [contenteditable="true"] { outline: 1px dashed var(--gold-dim); }
+
+/* ==========================================
+   APPENDIX TABLE STYLES
+   ========================================== */
+.apx-table-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.apx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 22px;
+  color: var(--cream-dim);
+  table-layout: fixed;
+}
+.apx-table thead th {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 0 22px 18px 0;
+  font-weight: 400;
+  vertical-align: bottom;
+  text-align: left;
+}
+.apx-table tbody tr {
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.apx-table tbody td {
+  padding: 18px 22px 18px 0;
+  vertical-align: top;
+  line-height: 1.45;
+  color: var(--cream-dim);
+}
+.apx-table tbody td:first-child {
+  color: var(--cream);
+  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+}
+.apx-table .cite-col {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  color: var(--gold-dim);
+  line-height: 1.5;
+}
+/* Review funnel */
+.review-funnel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+.funnel-stage {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.funnel-stage:last-child { border-bottom: none; }
+.funnel-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 160px;
+  text-align: right;
+  line-height: 1;
+}
+.funnel-label {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.2;
+}
+.funnel-detail {
+  font-size: 24px;
+  color: var(--cream-dim);
+  line-height: 1.4;
+  margin-top: 6px;
+}
+.funnel-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  color: var(--gold-dim);
+  min-width: 160px;
+  text-align: center;
+  padding-top: 2px;
+}
 </style>
 </head>
 <body>
@@ -1077,7 +1171,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
   <div class="ys ys-wide" aria-hidden="true"></div>
 
   <div class="left-zone">
-    <span class="field-label reveal d1">Strategy &amp; Organization · Oxford · 2026</span>
+    <span class="field-label reveal d1">Strategy Research Day · Oxford · 2026</span>
   </div>
 
   <div class="right-zone">
@@ -1117,7 +1211,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
       <li class="reveal d3"><span class="rm-num">01</span><span><strong>Motivation &amp; Research Question</strong> — Why does measurement matter for OD?</span></li>
       <li class="reveal d4"><span class="rm-num">02</span><span><strong>Structured Review</strong> — How have 129 studies measured distinctiveness?</span></li>
       <li class="reveal d5"><span class="rm-num">03</span><span><strong>Empirical Comparison</strong> — Do 42 different measures yield different results?</span></li>
-      <li class="reveal d6"><span class="rm-num">04</span><span><strong>Theory–Method Alignment Framework</strong> — Five steps to principled measurement</span></li>
+      <li class="reveal d6"><span class="rm-num">04</span><span><strong>Theory–Method Alignment Framework</strong> — Five steps to "optimal" measurement</span></li>
       <li class="reveal d7"><span class="rm-num">05</span><span><strong>Discussion &amp; Implications</strong> — Theory, methods, practice</span></li>
     </ol>
   </div>
@@ -1317,7 +1411,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
         <div style="font-family:'Space Mono',monospace;font-size:15px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Step 01</div>
         <svg style="position:absolute;top:24px;right:24px;opacity:0.25;" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#C9A84C" stroke-width="2"/><line x1="14" y1="24" x2="34" y2="24" stroke="#C9A84C" stroke-width="2"/><line x1="14" y1="18" x2="34" y2="18" stroke="#C9A84C" stroke-width="2"/><line x1="14" y1="30" x2="28" y2="30" stroke="#C9A84C" stroke-width="2"/></svg>
         <div style="font-size:36px;font-weight:700;color:var(--cream);margin-bottom:14px;">Structured Review</div>
-        <div style="font-size:24px;color:var(--cream-dim);line-height:1.45;">129 empirical OD studies across 23 journals (1990–2026)</div>
+        <div style="font-size:24px;color:var(--cream-dim);line-height:1.45;">129 empirical OD studies across 32 journals (1990–2026)</div>
       </div>
       <div class="reveal d4" style="display:flex;align-items:center;padding:0 12px;flex-shrink:0;">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><line x1="2" y1="16" x2="26" y2="16" stroke="rgba(201,168,76,0.6)" stroke-width="2"/><polyline points="18,8 28,16 18,24" stroke="rgba(201,168,76,0.6)" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
@@ -2446,6 +2540,388 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
   </div>
 </section>
 
+
+    <!-- ================================================
+         APPENDIX C — REVIEW METHODOLOGY DIVIDER
+         ================================================ -->
+    <section class="slide slide-divider" aria-label="Appendix C: Review Methodology">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="oxford-bar reveal d1" aria-hidden="true"></div>
+      <div class="part-label reveal d2">Appendix C</div>
+      <h1 class="reveal d3">Review<br>Methodology</h1>
+      <div class="part-sub reveal d4">How the structured review was conducted</div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX C1 — SEARCH STRATEGY
+         ================================================ -->
+    <section class="slide slide-content" aria-label="Appendix C1: Search strategy and scope">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="s-header">
+        <div class="s-section reveal d1">Appendix C1 · Review Methodology</div>
+        <h2 class="reveal d2">Search Strategy &amp; Scope</h2>
+        <div class="s-rule reveal d2"></div>
+      </div>
+      <div class="s-body" style="top:270px; display:flex; gap:80px; align-items:flex-start;">
+
+        <!-- Left column: search details -->
+        <div class="reveal d3" style="flex:0 0 760px; display:flex; flex-direction:column; gap:32px;">
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Database</div>
+            <p style="font-size:30px; color:var(--cream);">Scopus — title, abstract, and keywords</p>
+          </div>
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Search String</div>
+            <p style="font-family:'Space Mono',monospace; font-size:22px; color:var(--cream-dim); line-height:1.7; background:rgba(201,168,76,0.06); border-left:2px solid var(--gold-dim); padding:16px 24px;">
+              distinct* OR unique* OR similar* OR<br>
+              atypical* OR differen* OR typical*<br>
+              <span style="color:var(--gold-dim);">&nbsp;+ distinctiveness / optimal distinctiveness</span>
+            </p>
+          </div>
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Journal Scope</div>
+            <p style="font-size:28px; color:var(--cream-dim); line-height:1.5;">
+              FT50 journals (anchored at Deephouse, 1999) <em style="color:var(--cream);">+</em><br>
+              <em>American Journal of Sociology, American Sociological Review</em>,<br>
+              and adjacent strategy &amp; sociology outlets
+            </p>
+          </div>
+        </div>
+
+        <!-- Right column: key numbers -->
+        <div class="reveal d4" style="flex:1; display:flex; flex-direction:column; gap:0; padding-top:8px;">
+          <div style="padding:32px 0; border-bottom:1px solid rgba(201,168,76,0.2);">
+            <div style="font-family:'Space Mono',monospace; font-size:72px; font-weight:700; color:var(--gold); line-height:1;">1990</div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--cream-dim); margin-top:8px;">Earliest year in sample</div>
+          </div>
+          <div style="padding:32px 0; border-bottom:1px solid rgba(201,168,76,0.2);">
+            <div style="font-family:'Space Mono',monospace; font-size:72px; font-weight:700; color:var(--gold); line-height:1;">2026</div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--cream-dim); margin-top:8px;">Latest year in sample</div>
+          </div>
+          <div style="padding:32px 0; border-bottom:1px solid rgba(201,168,76,0.2);">
+            <div style="font-family:'Space Mono',monospace; font-size:72px; font-weight:700; color:var(--gold); line-height:1;">23</div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--cream-dim); margin-top:8px;">Journals represented</div>
+          </div>
+          <div style="padding:32px 0;">
+            <div style="font-family:'Space Mono',monospace; font-size:72px; font-weight:700; color:var(--gold); line-height:1;">~3,400</div>
+            <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.18em; text-transform:uppercase; color:var(--cream-dim); margin-top:8px;">Records before deduplication</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX C2 — THREE-STAGE SCREENING PROCESS
+         ================================================ -->
+    <section class="slide slide-content" aria-label="Appendix C2: Three-stage screening process">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="s-header">
+        <div class="s-section reveal d1">Appendix C2 · Review Methodology</div>
+        <h2 class="reveal d2">Three-Stage Screening Process</h2>
+        <div class="s-rule reveal d2"></div>
+      </div>
+      <div class="s-body" style="top:270px;">
+        <div class="review-funnel">
+
+          <div class="funnel-stage reveal d3">
+            <div class="funnel-arrow" style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase;">Stage 1</div>
+            <div style="min-width:200px; text-align:right;">
+              <div class="funnel-num">~3,400</div>
+            </div>
+            <div>
+              <div class="funnel-label">Keyword Search + Citation Tracing</div>
+              <div class="funnel-detail">Scopus keyword query across FT50 + AJS/ASR journals · supplemented by backward citation tracing from key seed papers (Deephouse 1999; Hannan et al. 2007)</div>
+            </div>
+          </div>
+
+          <div class="funnel-stage reveal d4">
+            <div class="funnel-arrow" style="font-size:28px; padding-top:0;">↓</div>
+            <div style="min-width:200px; text-align:right;">
+              <div class="funnel-num">~320</div>
+            </div>
+            <div>
+              <div class="funnel-label">LLM-Assisted Title &amp; Abstract Screening</div>
+              <div class="funnel-detail">Claude Opus used to screen each record for relevance: must (a) study organizational identity, positioning, or market differentiation, and (b) include or discuss an empirical measure of distinctiveness or similarity</div>
+            </div>
+          </div>
+
+          <div class="funnel-stage reveal d5">
+            <div class="funnel-arrow" style="font-size:28px; padding-top:0;">↓</div>
+            <div style="min-width:200px; text-align:right;">
+              <div class="funnel-num" style="color:var(--cream);">129</div>
+            </div>
+            <div>
+              <div class="funnel-label">Manual Full-Text Review <span style="color:var(--gold); font-weight:400;">→ Final Sample</span></div>
+              <div class="funnel-detail">Authors independently read each candidate in full · included only if the paper reports a concrete operationalization of distinctiveness or similarity as an independent or dependent variable</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX C3 — CODING PROTOCOL
+         ================================================ -->
+    <section class="slide slide-content" aria-label="Appendix C3: Coding protocol">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="s-header">
+        <div class="s-section reveal d1">Appendix C3 · Review Methodology</div>
+        <h2 class="reveal d2">Coding Protocol</h2>
+        <div class="s-rule reveal d2"></div>
+      </div>
+      <div class="s-body" style="top:270px; display:flex; gap:80px; align-items:flex-start;">
+
+        <div style="flex:0 0 800px; display:flex; flex-direction:column; gap:22px;">
+          <p class="reveal d3" style="font-size:26px; color:var(--cream-dim); line-height:1.5; margin-bottom:8px;">Each paper was coded on four primary measurement dimensions:</p>
+          <div class="reveal d4" style="display:flex; flex-direction:column; gap:0;">
+            <div style="display:flex; gap:32px; padding:20px 0; border-bottom:1px solid rgba(201,168,76,0.15); align-items:flex-start;">
+              <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); min-width:220px; padding-top:4px;">01 · Proxy Type</div>
+              <div style="font-size:26px; color:var(--cream-dim); line-height:1.4;">Semantic / Categorical / Strategic-Configurational / Physical</div>
+            </div>
+            <div style="display:flex; gap:32px; padding:20px 0; border-bottom:1px solid rgba(201,168,76,0.15); align-items:flex-start;">
+              <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); min-width:220px; padding-top:4px;">02 · Representation</div>
+              <div style="font-size:26px; color:var(--cream-dim); line-height:1.4;">Vector / distribution / set (e.g. TF-IDF, topic proportions, IPC class shares)</div>
+            </div>
+            <div style="display:flex; gap:32px; padding:20px 0; border-bottom:1px solid rgba(201,168,76,0.15); align-items:flex-start;">
+              <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); min-width:220px; padding-top:4px;">03 · Metric</div>
+              <div style="font-size:26px; color:var(--cream-dim); line-height:1.4;">Cosine / Manhattan / Euclidean / Jaccard / Mahalanobis / Dice / Jensen–Shannon</div>
+            </div>
+            <div style="display:flex; gap:32px; padding:20px 0; border-bottom:1px solid rgba(201,168,76,0.15); align-items:flex-start;">
+              <div style="font-family:'Space Mono',monospace; font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); min-width:220px; padding-top:4px;">04 · Reference Model</div>
+              <div style="font-size:26px; color:var(--cream-dim); line-height:1.4;">Competitor-based / Prototype (centroid) / Exemplar (salient peer)</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1; display:flex; flex-direction:column; gap:22px; padding-top:0;">
+          <p class="reveal d5" style="font-size:26px; color:var(--cream-dim); line-height:1.5; margin-bottom:8px;">Secondary coding dimensions:</p>
+          <ul class="reveal d6" style="gap:18px; padding:0; margin:0; list-style:none;">
+            <li style="padding-left:0; font-size:26px; color:var(--cream-dim); line-height:1.4; display:flex; gap:24px;">
+              <span style="color:var(--gold); min-width:26px;">—</span>
+              <span><strong style="color:var(--cream);">Dependent variable</strong>: ratings, survival, prices, growth, status</span>
+            </li>
+            <li style="padding-left:0; font-size:26px; color:var(--cream-dim); line-height:1.4; display:flex; gap:24px;">
+              <span style="color:var(--gold); min-width:26px;">—</span>
+              <span><strong style="color:var(--cream);">Industry context</strong>: technology, cultural, financial, pharma, services</span>
+            </li>
+            <li style="padding-left:0; font-size:26px; color:var(--cream-dim); line-height:1.4; display:flex; gap:24px;">
+              <span style="color:var(--gold); min-width:26px;">—</span>
+              <span><strong style="color:var(--cream);">Explicit OD theory</strong>: does the paper cite Deephouse / Zuckerman / Hannan?</span>
+            </li>
+            <li style="padding-left:0; font-size:26px; color:var(--cream-dim); line-height:1.4; display:flex; gap:24px;">
+              <span style="color:var(--gold); min-width:26px;">—</span>
+              <span><strong style="color:var(--cream);">Robustness checks</strong>: does the paper test multiple metrics or proxies?</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX D — TABLES DIVIDER
+         ================================================ -->
+    <section class="slide slide-divider" aria-label="Appendix D: Reference Tables">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="oxford-bar reveal d1" aria-hidden="true"></div>
+      <div class="part-label reveal d2">Appendix D</div>
+      <h1 class="reveal d3">Reference<br>Tables</h1>
+      <div class="part-sub reveal d4">Proxies · Reference Models · Distance Metrics</div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX D1 — PROXY TYPES TABLE
+         ================================================ -->
+    <section class="slide slide-content" aria-label="Appendix D1: Summary of common data proxies">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="s-header">
+        <div class="s-section reveal d1">Appendix D1 · Reference Tables</div>
+        <h2 class="reveal d2" style="font-size:56px;">Summary of Common Data Proxies</h2>
+        <div class="s-rule reveal d2"></div>
+      </div>
+      <div class="s-body" style="top:252px;">
+        <div class="apx-table-wrap reveal d3">
+          <table class="apx-table" style="font-size:21px;">
+            <colgroup>
+              <col style="width:200px;">
+              <col style="width:380px;">
+              <col style="width:340px;">
+              <col style="width:330px;">
+              <col style="width:340px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Proxy Type</th>
+                <th>Description</th>
+                <th>Theoretical Background</th>
+                <th>Example Applications</th>
+                <th>Exemplar Papers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Semantic / Symbolic</td>
+                <td style="font-size:19px;">Distinctiveness as deviation in meaning, framing, or discursive content of organizational self-presentations; symbolic boundaries through language.</td>
+                <td style="font-size:19px;">Cultural entrepreneurship &amp; cultural sociology; narrative composition &amp; storytelling shape evaluative legitimacy.</td>
+                <td style="font-size:19px;">Topic-model distributions, word embeddings of 10-Ks, IPO prospectuses, crowdfunding narratives, patent texts.</td>
+                <td class="cite-col" style="font-size:17px;">Haans (2019); Taeuscher et al. (2021, 2022); Gouvard et al. (2026); Arts et al. (2025)</td>
+              </tr>
+              <tr>
+                <td>Categorical</td>
+                <td style="font-size:19px;">Relative position within classification systems and category boundaries; conformity vs. deviance from recognized categories.</td>
+                <td style="font-size:19px;">Category theory; boundary spanning, legitimacy, and evaluation hinging on categorical belonging.</td>
+                <td style="font-size:19px;">Patent-class distributions (IPC/USPC/CPC), genre-tag memberships, SIC/NAICS codes, drug therapeutic-area portfolios.</td>
+                <td class="cite-col" style="font-size:17px;">Cutolo &amp; Ferriani (2024); Janisch &amp; Vossen (2022); Taeuscher et al. (2021)</td>
+              </tr>
+              <tr>
+                <td>Strategic Configurational</td>
+                <td style="font-size:19px;">Deviation from industry-average configurations of resource allocations, capabilities, and activity systems; competitive advantage.</td>
+                <td style="font-size:19px;">Resource-based view &amp; competitive strategy; configurational differentiation rather than symbolic interpretation.</td>
+                <td style="font-size:19px;">R&amp;D and advertising intensity ratios, asset-allocation profiles, CSR emphasis vectors, sales distributions across segments.</td>
+                <td class="cite-col" style="font-size:17px;">Gimeno &amp; Woo (1996); Deephouse (1999); Girardi et al. (2021)</td>
+              </tr>
+              <tr>
+                <td>Physical</td>
+                <td style="font-size:19px;">Variation in directly apprehensible physical, visual, or sonic attributes of the offering or artifact itself.</td>
+                <td style="font-size:19px;">Aesthetic economy &amp; design-based theories; material and visual turn in organization studies.</td>
+                <td style="font-size:19px;">Automobile frontal-design geometry, CNN image embeddings, audio feature vectors, color-space coordinates, molecular fingerprints.</td>
+                <td class="cite-col" style="font-size:17px;">Bu et al. (2022); Fuchs et al. (2023); Banerjee et al. (2023)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX D2 — REFERENCE MODELS TABLE
+         ================================================ -->
+    <section class="slide slide-content" aria-label="Appendix D2: Summary of common reference models">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="s-header">
+        <div class="s-section reveal d1">Appendix D2 · Reference Tables</div>
+        <h2 class="reveal d2" style="font-size:56px;">Summary of Common Reference Models</h2>
+        <div class="s-rule reveal d2"></div>
+      </div>
+      <div class="s-body" style="top:252px;">
+        <div class="apx-table-wrap reveal d3">
+          <table class="apx-table" style="font-size:22px;">
+            <colgroup>
+              <col style="width:220px;">
+              <col style="width:560px;">
+              <col style="width:480px;">
+              <col style="width:380px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Reference Model</th>
+                <th>Description</th>
+                <th>Suitable Context</th>
+                <th>Exemplar Papers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Competitor</td>
+                <td style="font-size:21px;">Measures distinctiveness through direct pairwise comparisons among all category members — relative positioning within a competitive field.</td>
+                <td style="font-size:21px;">Most useful in transparent, densely competitive markets where evaluators can maintain a mental map of many rivals; cognitively costly in opaque or rapidly changing contexts.</td>
+                <td class="cite-col" style="font-size:18px;">Arts &amp; Vossen (2023); Carlson et al. (2023); Hoberg &amp; Phillips (2016); Giorgi et al. (2015); Lo &amp; Kenney (2015)</td>
+              </tr>
+              <tr>
+                <td>Prototype</td>
+                <td style="font-size:21px;">Measures distinctiveness as deviation from the centroid of a category — evaluated relative to a generalized category standard highlighting typicality.</td>
+                <td style="font-size:21px;">Works best in mature, institutionalized categories with stable central norms; less useful in nascent or fragmented fields.</td>
+                <td class="cite-col" style="font-size:18px;">Taeuscher et al. (2022, 2021); Gouvard et al. (2026); Haans (2019); Barlow et al. (2019); Hanisch et al. (2024)</td>
+              </tr>
+              <tr>
+                <td>Exemplar</td>
+                <td style="font-size:21px;">Measures distinctiveness relative to the most salient or successful category members — divergence from highly recognized, exemplary cases rather than average norms.</td>
+                <td style="font-size:21px;">Most plausible in nascent markets, high-status hierarchies, or information-scarce contexts where a few iconic cases dominate attention.</td>
+                <td class="cite-col" style="font-size:18px;">Zhao et al. (2018); Barlow et al. (2019); Khessina et al. (2016)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         APPENDIX D3 — DISTANCE METRICS TABLE
+         ================================================ -->
+    <section class="slide slide-content" aria-label="Appendix D3: Distance metrics summary">
+      <div class="ys ys-left" aria-hidden="true"></div>
+      <div class="s-header">
+        <div class="s-section reveal d1">Appendix D3 · Reference Tables</div>
+        <h2 class="reveal d2" style="font-size:56px;">Common Distance Metrics</h2>
+        <div class="s-rule reveal d2"></div>
+      </div>
+      <div class="s-body" style="top:252px;">
+        <div class="apx-table-wrap reveal d3">
+          <table class="apx-table" style="font-size:20px;">
+            <colgroup>
+              <col style="width:220px;">
+              <col style="width:360px;">
+              <col style="width:540px;">
+              <col style="width:500px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Formula</th>
+                <th>Description</th>
+                <th>Exemplar Papers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Manhattan Distance</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">∑|xᵢ − yᵢ|</td>
+                <td style="font-size:19px;">Absolute distance between two points across all dimensions; robust to outliers.</td>
+                <td class="cite-col" style="font-size:17px;">Shen et al. (2024); Taeuscher et al. (2021); Zhang et al. (2020); Haans (2019); Cennamo (2013)</td>
+              </tr>
+              <tr>
+                <td>Cosine Distance</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">1 − (A·B / ‖A‖‖B‖)</td>
+                <td style="font-size:19px;">Angle-based distance between vectors; scale-invariant, preferred for high-dimensional text.</td>
+                <td class="cite-col" style="font-size:17px;">Banerjee et al. (2023); Janisch &amp; Vossen (2022); Barlow et al. (2019); Hoberg &amp; Phillips (2016)</td>
+              </tr>
+              <tr>
+                <td>Euclidean Distance</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">√∑(aᵢ − bᵢ)²</td>
+                <td style="font-size:19px;">Straight-line distance; sensitive to scale and dimensionality.</td>
+                <td class="cite-col" style="font-size:17px;">Bu et al. (2022); Zhao et al. (2018); Litov et al. (2012); Gimeno &amp; Woo (1996)</td>
+              </tr>
+              <tr>
+                <td>Jaccard Distance</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">1 − |A∩B| / |A∪B|</td>
+                <td style="font-size:19px;">Set-based non-overlap; natural for binary or categorical feature spaces.</td>
+                <td class="cite-col" style="font-size:17px;">Cutolo &amp; Ferriani (2024); Chan et al. (2021); Arts et al. (2018)</td>
+              </tr>
+              <tr>
+                <td>Dice Distance</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">1 − 2|A∩B| / (|A|+|B|)</td>
+                <td style="font-size:19px;">Set overlap with harmonic denominator; penalizes large sets more than Jaccard.</td>
+                <td class="cite-col" style="font-size:17px;">Smith &amp; Chae (2016); Lo &amp; Kenney (2015)</td>
+              </tr>
+              <tr>
+                <td>Mahalanobis Distance</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">√(x−y)ᵀ S(x−y)</td>
+                <td style="font-size:19px;">Accounts for correlations among dimensions via covariance matrix S; distribution-aware.</td>
+                <td class="cite-col" style="font-size:17px;">Claes &amp; Vissa (2020); Kim &amp; Rhee (2017)</td>
+              </tr>
+              <tr>
+                <td>Jensen–Shannon Divergence</td>
+                <td style="font-family:'Space Mono',monospace; font-size:17px; color:var(--cream);">½D(A‖M) + ½D(B‖M)</td>
+                <td style="font-size:19px;">Symmetric KL divergence between probability distributions; M = average of A and B.</td>
+                <td class="cite-col" style="font-size:17px;">Majoubi &amp; Zhao (2023)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 </main>
 </div><!-- /.deck-viewport -->
 
