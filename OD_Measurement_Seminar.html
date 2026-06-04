@@ -1466,10 +1466,10 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
     <div style="flex:0 0 640px; display:flex; flex-direction:column; gap:0;">
       <ul style="gap:18px;">
         <li class="reveal d3"><strong>Search:</strong> Scopus · <em>distinct*, unique*, similar*, atypical*, differen*, typical*</em></li>
-        <li class="reveal d4"><strong>Method:</strong> Three-stage — keyword search + citation tracing → LLM screening → manual full-text review</li>
-        <li class="reveal d5"><strong>Scope:</strong> FT50 (anchored at Deephouse, 1999) expanded to include AJS, ASR, and adjacent journals</li>
-        <li class="reveal d6"><strong>Final sample:</strong> 129 studies · 1990–2026 · 23 journals</li>
-        <li class="reveal d7"><strong>Principle:</strong> Theoretical alignment — congruence between conceptual definition and operationalization</li>
+        <li class="reveal d4"><strong>Method:</strong> Three-stage — keyword search + citation tracing (Zhao et al., 2017) → LLM screening → manual full-text review</li>
+        <li class="reveal d5"><strong>Scope:</strong> FT50 published since 1999 (Deephouse's seminal work) to search cutoff date (January 10, 2025) in Scopus search; expanded to include AJS and ASR and studies published before 1999 through citation tracing on Zhao et al. (2017) and other reviewed studies</li>
+        <li class="reveal d6"><strong>Final sample:</strong> 129 studies · 1990–2026 · 32 journals</li>
+        <li class="reveal d7"><strong>Principle:</strong> Theoretical alignment — congruence between conceptual definition and operationalization</li>, decomposing into 4 theoretical dimensions (audience, proxy, reference, and metric) to systematically analyze measurement choices. 
       </ul>
     </div>
 
@@ -2080,7 +2080,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
       <tbody>
         <tr><td>Magnitude</td><td>Manhattan, Euclidean</td><td>Total deviation accumulates; many small differences sum like one large one</td></tr>
         <tr><td>Directional</td><td>Cosine</td><td>Pattern alignment matters more than scale of difference</td></tr>
-        <tr><td>Variance-weighted</td><td>Mahalanobis</td><td>Rarity is diagnostic; rare deviations are amplified</td></tr>
+        <tr><td>Variance-weighted</td><td>Mahalanobis</td><td>Rarity is diagnostic; covariance between variables is considered</td></tr>
         <tr><td>Overlap</td><td>Jaccard, Dice</td><td>Presence or absence of shared membership is key</td></tr>
         <tr><td>Distributional</td><td>JSD</td><td>Divergence in probabilistic profiles under uncertainty</td></tr>
       </tbody>
@@ -2189,18 +2189,58 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
       <div class="contrib-item reveal d4">
         <div class="contrib-num">02</div>
         <div class="contrib-text">
-          <div class="contrib-title">Principled Basis for Measurement Choice</div>
+          <div class="contrib-title">Structured Guidance for Measurement Choice</div>
           <div class="contrib-desc">Five-step framework helps researchers select measures consistent with their theoretical claims — directly resolving the four pervasive blind spots.</div>
         </div>
       </div>
       <div class="contrib-item reveal d5">
         <div class="contrib-num">03</div>
         <div class="contrib-text">
-          <div class="contrib-title">Measurement as a Theoretical Act</div>
-          <div class="contrib-desc">Transforms methodological diversity from a source of fragmentation into a foundation for cumulative theorizing. Optimality is not a fixed threshold — it is audience- and context-contingent.</div>
+          <div class="contrib-title">Microfoundations of OD</div>
+          <div class="contrib-desc">Shift OD from a static equilibrium to dynamic alignment between audience and the entity. Optimality is not a threshold but the outcome of a particular audience applying a specific evaluative logic to a particular dimension of the offering.
+</div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================================================
+     SLIDE 29b — CONTRIBUTION TO MEASUREMENT THEORY
+     ================================================ -->
+<section class="slide slide-content" aria-label="Contribution to measurement theory">
+  <div class="ys ys-left" aria-hidden="true"></div>
+  <div class="s-header">
+    <div class="s-section reveal d1">Discussion · Contributions</div>
+    <h2 class="reveal d2">Contribution to Measurement Theory</h2>
+    <div class="s-rule reveal d2"></div>
+  </div>
+  <div class="s-body" style="top:270px; display:flex; flex-direction:column; gap:0;">
+
+    <div class="reveal d3" style="display:flex; gap:36px; padding:26px 0; border-bottom:1px solid rgba(201,168,76,0.18); align-items:flex-start;">
+      <div style="font-family:'Space Mono',monospace; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); min-width:44px; padding-top:6px;">01</div>
+      <div>
+        <p style="font-size:29px; font-weight:600; color:var(--cream); line-height:1.3; margin-bottom:10px;">Measurement fragmentation reflects theoretical differences, not merely statistical noise.</p>
+        <p style="font-size:24px; color:var(--cream-dim); line-height:1.5;">Applying 42 distinctiveness measures to the same dataset produces systematically different results, suggesting that alternative operationalizations embody different assumptions about what distinctiveness <em>is</em> and how evaluation works.</p>
+      </div>
+    </div>
+
+    <div class="reveal d4" style="display:flex; gap:36px; padding:26px 0; border-bottom:1px solid rgba(201,168,76,0.18); align-items:flex-start;">
+      <div style="font-family:'Space Mono',monospace; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); min-width:44px; padding-top:6px;">02</div>
+      <div>
+        <p style="font-size:29px; font-weight:600; color:var(--cream); line-height:1.3; margin-bottom:10px;">We introduce a framework for unpacking the evaluative assumptions embedded in measures.</p>
+        <p style="font-size:24px; color:var(--cream-dim); line-height:1.5;">Our five-step framework (audience, cue, representation, reference, and commensuration) reveals the <em style="color:var(--cream);">"cognitive algebra"</em> underlying relational measures and provides a systematic way to diagnose and improve theory–measurement alignment.</p>
+      </div>
+    </div>
+
+    <div class="reveal d5" style="display:flex; gap:36px; padding:26px 0; align-items:flex-start;">
+      <div style="font-family:'Space Mono',monospace; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); min-width:44px; padding-top:6px;">03</div>
+      <div>
+        <p style="font-size:29px; font-weight:600; color:var(--cream); line-height:1.3; margin-bottom:10px;">We extend construct validity to relational constructs.</p>
+        <p style="font-size:24px; color:var(--cream-dim); line-height:1.5;">Beyond reliability and construct clarity, valid measurement requires alignment between a measure's evaluative logic and the audience evaluation process specified by theory — applying not only to distinctiveness but also to <em style="color:var(--cream);">technological, cultural, and institutional distance</em>.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
