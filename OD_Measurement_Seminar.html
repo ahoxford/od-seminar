@@ -27,6 +27,11 @@
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
   color: rgba(237,232,224,0.45);
 }
+#pw-hint {
+  font-family: Georgia, serif; font-size: 13px; font-style: italic;
+  color: rgba(237,232,224,0.38); text-align: center;
+  letter-spacing: 0.02em; line-height: 1.6; max-width: 340px;
+}
 #pw-form { display: flex; flex-direction: column; gap: 14px; width: 100%; }
 #pw-input {
   background: rgba(255,255,255,0.04);
@@ -57,7 +62,7 @@
 <script>
 (function(){
   // SHA-256 hash of the access password (password not stored in plaintext)
-  const STORED = '8452e02fcd7a7c0e09346e0d8e4bb8ef553b94e4cab043d2744aef781cf1981c';
+  const STORED = '6557739a67283a8de383fc5c0997fbec7c5721a46f28f3235fc9607598d9016b';
 
   async function sha256(str) {
     const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -1152,6 +1157,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
     <div id="pw-wordmark">The Optimal Measure of Distinctiveness</div>
     <div id="pw-rule"></div>
     <div id="pw-label">Access Required</div>
+    <div id="pw-hint">Which year did this amazing project officially started?</div>
     <form id="pw-form">
       <input id="pw-input" type="password" placeholder="Enter password" autocomplete="current-password">
       <button id="pw-btn" type="submit">Enter</button>
@@ -1467,7 +1473,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
       <ul style="gap:14px;">
         <li class="reveal d3" style="font-size:27px;"><strong>Search:</strong> Scopus · <em>distinct*, unique*, similar*, atypical*, differen*, typical*</em></li>
         <li class="reveal d4" style="font-size:27px;"><strong>Method:</strong> Three-stage — keyword search + citation tracing (Zhao et al., 2017) → LLM screening → manual full-text review</li>
-        <li class="reveal d5" style="font-size:27px;"><strong>Scope:</strong> FT50 (1999 – Jan 2025); expanded to AJS, ASR, and pre-1999 studies via citation tracing on Zhao et al. (2017)</li>
+        <li class="reveal d5" style="font-size:27px;"><strong>Scope:</strong> FT50 (1999 – Jan 2025); expanded to AJS, ASR, and pre-1999 studies via citation tracing on Zhao et al. (2017) and our reviewed studies.</li>
         <li class="reveal d6" style="font-size:27px;"><strong>Final sample:</strong> 129 studies · 1990–2026 · 32 journals</li>
         <li class="reveal d7" style="font-size:27px;"><strong>Principle:</strong> Theoretical alignment — congruence between conceptual definition and operationalization, decomposing into 4 dimensions (audience, proxy, reference, metric) to systematically analyze measurement choices.</li>
       </ul>
@@ -2395,14 +2401,14 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
         <div class="contrib-num">01</div>
         <div class="contrib-text">
           <div class="contrib-title">Explains Empirical Fragmentation</div>
-          <div class="contrib-desc">Inconsistencies across 129 studies driven by implicit measurement assumptions, not weak theory. Our review and empirical comparison make this explicit and interpretable.</div>
+          <div class="contrib-desc">Inconsistencies in empirical results across OD studies may be partly driven by implicit measurement assumptions. </div>
         </div>
       </div>
       <div class="contrib-item reveal d4">
         <div class="contrib-num">02</div>
         <div class="contrib-text">
-          <div class="contrib-title">Structured Guidance for Measurement Choice</div>
-          <div class="contrib-desc">Five-step framework helps researchers select measures consistent with their theoretical claims — directly resolving the four pervasive blind spots.</div>
+          <div class="contrib-title">Structured Guidance for Measurement Choic to resolve 4 blind spots</div>
+          <div class="contrib-desc">Five-step framework helps researchers select measures consistent with their theoretical claims — directly resolving the four pervasive blind spots (single audience, reference default, equal-weighting, and metric fungibility ).</div>
         </div>
       </div>
       <div class="contrib-item reveal d5">
