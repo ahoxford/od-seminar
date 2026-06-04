@@ -4,6 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Optimal Measure of Distinctiveness — Huang, Zhao, Vossen</title>
+<style>
+/* ── PASSWORD GATE ─────────────────────────────────────── */
+#pw-gate {
+  position: fixed; inset: 0; z-index: 99999;
+  background: #060C14;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Mono', 'Courier New', monospace;
+}
+#pw-gate.hidden { display: none; }
+#pw-box {
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+  width: 420px;
+}
+#pw-wordmark {
+  font-family: Georgia, serif; font-size: 13px; font-style: italic;
+  letter-spacing: 0.06em; color: rgba(201,168,76,0.65);
+  text-align: center; line-height: 1.6;
+}
+#pw-rule { width: 48px; height: 1px; background: rgba(201,168,76,0.35); }
+#pw-label {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(237,232,224,0.45);
+}
+#pw-form { display: flex; flex-direction: column; gap: 14px; width: 100%; }
+#pw-input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.30);
+  border-radius: 0;
+  color: #ede8e0; font-family: 'Space Mono', monospace; font-size: 15px;
+  padding: 14px 18px; outline: none; width: 100%; box-sizing: border-box;
+  letter-spacing: 0.10em;
+  transition: border-color 0.2s;
+}
+#pw-input:focus { border-color: rgba(201,168,76,0.70); }
+#pw-input::placeholder { color: rgba(237,232,224,0.22); letter-spacing: 0.08em; }
+#pw-btn {
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.45);
+  color: #C9A84C; font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 13px 0; cursor: pointer; width: 100%;
+  transition: background 0.2s, border-color 0.2s;
+}
+#pw-btn:hover { background: rgba(201,168,76,0.22); border-color: rgba(201,168,76,0.70); }
+#pw-error {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(155,28,46,0.90); text-align: center;
+  display: none;
+}
+</style>
+<script>
+(function(){
+  // SHA-256 hash of the access password (password not stored in plaintext)
+  const STORED = '8452e02fcd7a7c0e09346e0d8e4bb8ef553b94e4cab043d2744aef781cf1981c';
+
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  function unlock() {
+    const gate = document.getElementById('pw-gate');
+    if (gate) gate.classList.add('hidden');
+    sessionStorage.setItem('od-seminar-auth', '1');
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    // Already authenticated this session?
+    if (sessionStorage.getItem('od-seminar-auth') === '1') { unlock(); return; }
+
+    const form  = document.getElementById('pw-form');
+    const input = document.getElementById('pw-input');
+    const err   = document.getElementById('pw-error');
+
+    input.focus();
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      err.style.display = 'none';
+      const hash = await sha256(input.value);
+      if (hash === STORED) {
+        unlock();
+      } else {
+        err.style.display = 'block';
+        input.value = '';
+        input.focus();
+      }
+    });
+  });
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -961,6 +1052,19 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
 </style>
 </head>
 <body>
+
+<div id="pw-gate">
+  <div id="pw-box">
+    <div id="pw-wordmark">The Optimal Measure of Distinctiveness</div>
+    <div id="pw-rule"></div>
+    <div id="pw-label">Access Required</div>
+    <form id="pw-form">
+      <input id="pw-input" type="password" placeholder="Enter password" autocomplete="current-password">
+      <button id="pw-btn" type="submit">Enter</button>
+      <div id="pw-error">Incorrect password</div>
+    </form>
+  </div>
+</div>
 
 <div class="deck-viewport">
 <main class="deck-stage" id="deckStage" role="main" aria-label="Seminar presentation: The Optimal Measure of Distinctiveness">
