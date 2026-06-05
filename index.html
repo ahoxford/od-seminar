@@ -1624,8 +1624,6 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
       </div>
     </div>
 
-    <p class="reveal d5" style="font-size:26px; color:var(--gold-dim); font-style:italic; line-height:1.5;">
-      Let me walk through each of these.
     </p>
 
   </div>
@@ -1809,42 +1807,42 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
     <h2 class="reveal d2">Four Pervasive Blind Spots in Current Practice</h2>
     <div class="s-rule reveal d2"></div>
   </div>
-  <!-- 4-card grid -->
-  <div class="reveal d3" style="position:absolute;top:240px;left:80px;right:80px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:32px 48px;">
+  <!-- 4-card vertical stack — staggered reveal -->
+  <div style="position:absolute;top:240px;left:80px;right:200px;display:flex;flex-direction:column;gap:28px;">
 
     <!-- Card 1 -->
-    <div style="display:flex;gap:28px;align-items:flex-start;">
-      <div style="flex:0 0 64px;width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--void);flex-shrink:0;">1</div>
+    <div class="reveal d3" style="display:flex;gap:32px;align-items:center;border-left:3px solid var(--gold-dim);padding-left:32px;">
+      <div style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--void);flex-shrink:0;">1</div>
       <div>
-        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:10px;line-height:1.25;">Single-Audience Assumption</div>
-        <div style="font-size:20px;color:var(--cream-dim);line-height:1.5;">Studies select one audience (peers, critics, consumers, algorithms) and treat that choice as theoretically neutral — yet each audience applies a different evaluative logic that determines what counts as distinct.</div>
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:6px;line-height:1.2;">Single-Audience Assumption</div>
+        <div style="font-size:20px;color:var(--cream-dim);line-height:1.45;">Few studies specify whose evaluations they model; most assume a homogeneous evaluator.</div>
       </div>
     </div>
 
     <!-- Card 2 -->
-    <div style="display:flex;gap:28px;align-items:flex-start;">
-      <div style="flex:0 0 64px;width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--void);flex-shrink:0;">2</div>
+    <div class="reveal d4" style="display:flex;gap:32px;align-items:center;border-left:3px solid var(--gold-dim);padding-left:32px;">
+      <div style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--void);flex-shrink:0;">2</div>
       <div>
-        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:10px;line-height:1.25;">Reference Default</div>
-        <div style="font-size:20px;color:var(--cream-dim);line-height:1.5;">Most studies default to the market or industry as the reference category without justification — yet the reference category defines the comparison space and encodes assumptions about which comparisons are theoretically meaningful.</div>
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:6px;line-height:1.2;">Reference Default</div>
+        <div style="font-size:20px;color:var(--cream-dim);line-height:1.45;">Prototype or competitor baselines adopted by convention, not theoretical diagnosis.</div>
       </div>
     </div>
 
     <!-- Card 3 -->
-    <div style="display:flex;gap:28px;align-items:flex-start;">
-      <div style="flex:0 0 64px;width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--void);flex-shrink:0;">3</div>
+    <div class="reveal d5" style="display:flex;gap:32px;align-items:center;border-left:3px solid var(--gold-dim);padding-left:32px;">
+      <div style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--void);flex-shrink:0;">3</div>
       <div>
-        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:10px;line-height:1.25;">Equal Weighting</div>
-        <div style="font-size:20px;color:var(--cream-dim);line-height:1.5;">Averaging across all product attributes treats each dimension as equally important to audiences — yet theories of optimal distinctiveness differ sharply on which dimensions trigger conformity vs. differentiation pressures.</div>
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:6px;line-height:1.2;">Equal Weighting</div>
+        <div style="font-size:20px;color:var(--cream-dim);line-height:1.45;">All attributes treated as equally important; audiences selectively weigh cues.</div>
       </div>
     </div>
 
     <!-- Card 4 -->
-    <div style="display:flex;gap:28px;align-items:flex-start;">
-      <div style="flex:0 0 64px;width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--void);flex-shrink:0;">4</div>
+    <div class="reveal d6" style="display:flex;gap:32px;align-items:center;border-left:3px solid var(--gold-dim);padding-left:32px;">
+      <div style="flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--void);flex-shrink:0;">4</div>
       <div>
-        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:10px;line-height:1.25;">Metric Fungibility</div>
-        <div style="font-size:20px;color:var(--cream-dim);line-height:1.5;">Distance metrics (Euclidean, cosine, Mahalanobis, etc.) are swapped interchangeably across studies as if mathematically equivalent — yet each metric embeds a different geometric theory of how attribute combinations are perceived as similar or different.</div>
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--cream);margin-bottom:6px;line-height:1.2;">Metric Fungibility</div>
+        <div style="font-size:20px;color:var(--cream-dim);line-height:1.45;">Metrics swapped as robustness checks, ignoring distinct evaluative logics.</div>
       </div>
     </div>
 
@@ -2261,7 +2259,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
   <div class="div-content">
     <div class="part-label reveal d2">Part Four</div>
     <h2 class="reveal d3">Theory–Method<br>Alignment<br>Framework</h2>
-    <p class="div-desc reveal d4">Five sequential steps that link the logic of audience evaluation to concrete measurement choices.</p>
+    <p class="div-desc reveal d4">Five steps that link the logic of audience evaluation to concrete measurement choices.</p>
   </div>
 </section>
 
@@ -2313,7 +2311,7 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
         <div class="step-detail">The metric encodes a cognitive algebra</div>
       </div>
     </div>
-    <p class="reveal d8" style="font-size:24px;font-style:italic;color:var(--gold-dim);margin-top:32px;text-align:center;">Grounded in Information Integration Theory (Anderson, 1974)</p>
+    <p class="reveal d8" style="font-size:24px;font-style:italic;color:var(--gold-dim);margin-top:32px;text-align:center;">Grounded in Information Integration Theory—Cognitive Algebra (Anderson, 1974)</p>
   </div>
 </section>
 
@@ -2487,7 +2485,8 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
     <div class="s-rule reveal d2"></div>
   </div>
   <div class="s-body" style="top:255px;">
-    <p class="reveal d3" style="font-size:24px;font-style:italic;color:var(--cream-dim);margin-bottom:24px;">"The social process of transforming qualitative differences into a common quantitative metric" — Espeland &amp; Stevens, 1998</p>
+    <p class="reveal d3" style="font-size:24px;font-style:italic;color:var(--cream-dim);margin-bottom:24px;">The social process of transforming qualitative differences into a common quantitative metric" (Espeland &amp; Stevens, 1998)</p>
+     <p class="reveal d3" style="font-size:24px;font-style:italic;color:var(--cream-dim);margin-bottom:24px;">Commensuration is not neutral. It constitutes normative, value-laden judgments (Lamont, 2012)</p>
     <table class="comm-table reveal d4" aria-label="Commensuration metrics and their evaluative logics">
       <thead>
         <tr>
@@ -2505,30 +2504,6 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
       </tbody>
     </table>
     <p class="reveal d5" style="font-size:22px;font-style:italic;color:var(--gold-dim);margin-top:24px;">The metric determines not only how distinctiveness is measured, but what distinctiveness <em>means.</em></p>
-  </div>
-</section>
-
-<!-- ================================================
-     SLIDE 26 — INTEGRATING THE FIVE STEPS
-     ================================================ -->
-<section class="slide slide-content" aria-label="Integrating the five steps">
-  <div class="ys ys-left" aria-hidden="true"></div>
-  <div class="s-header">
-    <div class="s-section reveal d1">Framework · Integration</div>
-    <h2 class="reveal d2">The Steps Are Sequential but <em>Interdependent</em></h2>
-    <div class="s-rule reveal d2"></div>
-  </div>
-  <div class="s-body">
-    <ul>
-      <li class="reveal d3"><strong>Audience</strong> specification → constrains cue selection and weighting</li>
-      <li class="reveal d4"><strong>Cues</strong> → shape plausible representational geometries</li>
-      <li class="reveal d5"><strong>Representations</strong> → limit feasible reference models and metrics</li>
-      <li class="reveal d6"><strong>Reference + Commensuration</strong> → jointly determine the meaning of deviation</li>
-    </ul>
-    <div class="reveal d7" style="margin-top:44px;padding:32px 40px;background:var(--oxford);border-left:4px solid var(--gold);">
-      <p style="font-size:28px;color:var(--cream);font-weight:600;">The framework does not prescribe a single optimal measure.</p>
-      <p style="font-size:26px;color:var(--cream-dim);margin-top:10px;line-height:1.45;font-style:italic;">It specifies constraints: for any given theory and context, only a subset of measurement choices are theoretically defensible.</p>
-    </div>
   </div>
 </section>
 
